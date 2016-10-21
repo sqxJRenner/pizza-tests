@@ -28,6 +28,11 @@ from unittest import *
 #     assert (paul == (top | (top & crust)))
 
 
+# def test_func_one(top, crust):
+#     if top == pepperoni | top == sausage & crust == garlic:
+#         return paul
+
+
 def func(x):
     x += 1
     return x
