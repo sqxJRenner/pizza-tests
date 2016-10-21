@@ -1,0 +1,37 @@
+from sympy import *
+from unittest import *
+
+# toppings = ["Mushrooms", "Pepperoni", "Sausage"]
+# crusts = ["Butter", "Garlic", "Cajun"]
+
+# cTop = input("Choose a topping: Mushroom, Pepperoni, or Sausage")
+# cCrust = input("Choose a Crust: Butter, Garlic, or Cajun")
+
+# ryan = (butter | cajun) and (mushroom | pepperoni | sausage)
+# paul = pepperoni | (sausage & garlic)
+# sam = (garlic | cajun) and (mushroom | pepperoni | sausage)
+# matt = (butter | garlic | cajun) and (mushroom | pepperoni | sausage)
+
+# mushroom, pepperoni, sausage = symbols('mushrooms, pepperoni, sausage')
+# butter, garlic, cajun = symbols('butter, garlic, cajun')
+
+# ryan = (butter | cajun) & (mushroom | pepperoni | sausage)
+# paul = pepperoni | (sausage & garlic)
+# sam = (garlic | cajun) & (mushroom | pepperoni | sausage)
+# matt = (butter | garlic | cajun) & (mushroom | pepperoni | sausage)
+
+
+# mushroom, pepperoni, sausage, butter, garlic, cajun = False
+
+
+# def test_one(top, crust):
+#     assert (paul == (top | (top & crust)))
+
+
+def func(x):
+    x += 1
+    return x
+
+
+def test_answer():
+    assert func(4) == 5
