@@ -15,23 +15,30 @@ from unittest import *
 # mushroom, pepperoni, sausage = symbols('mushrooms, pepperoni, sausage')
 # butter, garlic, cajun = symbols('butter, garlic, cajun')
 
+# mushroom = "mushrooms"
+# pepperoni = "pepperoni"
+# sausage = "sausage"
+# butter = "butter"
+# garlic = "garlic"
+# cajun = "cajun"
+
 # ryan = (butter | cajun) & (mushroom | pepperoni | sausage)
 # paul = pepperoni | (sausage & garlic)
 # sam = (garlic | cajun) & (mushroom | pepperoni | sausage)
 # matt = (butter | garlic | cajun) & (mushroom | pepperoni | sausage)
 
 
-# mushroom, pepperoni, sausage, butter, garlic, cajun = False
-
-
 # def test_one(top, crust):
 #     assert (paul == (top | (top & crust)))
 
 
-# def test_func_one(top, crust):
+# def func_one(top, crust):
 #     if top == pepperoni | top == sausage & crust == garlic:
 #         return paul
 
+
+# def test_func():
+#     assert func_one("sausage", "garlic") == paul
 
 def func(x):
     x += 1
