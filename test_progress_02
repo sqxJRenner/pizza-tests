@@ -1,0 +1,125 @@
+# def f_topping(top):
+#    return top == "mushrooms"
+
+
+# def f_crust(crust):
+#     return crust == "butter"
+
+# ryan = (butter | cajun)
+# paul = pepperoni | (sausage & garlic)
+# sam = ~butter
+# matt = (butter | garlic | cajun) & (mushroom | pepperoni | sausage)
+
+
+def f_in_toppings(top):
+    toppings = ["mushroom", "pepperoni", "sausage"]
+    return top in toppings
+
+
+def f_in_crusts(crust):
+    crusts = ["butter", "garlic", "cajun"]
+    return crust in crusts
+
+
+def f_is_option(top, crust):
+    toppings = ["mushroom", "pepperoni", "sausage"]
+    crusts = ["butter", "garlic", "cajun"]
+    if (top in toppings) & (crust in crusts):
+        return True
+    else:
+        return False
+
+
+def f_check_ryan(top, crust):
+    if f_is_option(top, crust):
+        if (crust == "butter") | (crust == "cajun"):
+            return True
+        else:
+            return False
+    else:
+        print("Not a topping/crust combination!")
+        return False
+
+
+def f_check_paul(top, crust):
+    if f_is_option(top, crust):
+        if (top == "pepperoni") | ((top == "sausage") & (crust == "cajun")):
+            return True
+        else:
+            return False
+    else:
+        print("Not a topping/crust combination!")
+        return False
+
+
+def f_check_sam(top, crust):
+    if f_is_option(top, crust):
+        if crust != "butter":
+            return True
+        else:
+            return False
+    else:
+        print("Not a topping/crust combination!")
+        return False
+
+
+def f_check_matt(top, crust):
+    if f_is_option(top, crust):
+        return True
+    else:
+        print("Not a topping/crust combination!")
+        return False
+
+
+def test_func1():
+    top = "mushroom"
+    crust = "cajun"
+    assert f_check_matt(top, crust) == True
+
+
+def test_func2():
+    top = "mushroom"
+    crust = "cajun"
+    assert f_check_paul(top, crust) == True
+
+
+def test_func3():
+    top = "mushroom"
+    crust = "cajun"
+    assert f_check_ryan(top, crust) == True
+
+
+def test_func4():
+    top = "mushroom"
+    crust = "cajun"
+    assert f_check_sam(top, crust) == True
+
+
+# def test_mush():
+#     assert f_in_toppings("mushroom") == True
+#     assert f_in_crusts("mushroom") == False
+
+
+# def test_pep():
+#     assert f_in_toppings("pepperoni") == True
+#     assert f_in_crusts("pepperoni") == False
+
+
+# def test_saug():
+#     assert f_in_toppings("sausage") == True
+#     assert f_in_crusts("sausage") == False
+
+
+# def test_butter():
+#         assert f_in_toppings("butter") == False
+#         assert f_in_crusts("butter") == True
+
+
+# def test_garlic():
+#     assert f_in_toppings("garlic") == False
+#     assert f_in_crusts("garlic") == True
+
+
+# def test_cajun():
+#     assert f_in_toppings("cajun") == False
+#     assert f_in_crusts("cajun") == True
